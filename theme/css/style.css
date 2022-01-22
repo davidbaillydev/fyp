@@ -535,6 +535,38 @@ button:focus,
   outline: none;
 }
 
+.center {
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 70px;
+}
+
+.center:before,
+.center:after,
+.center div {
+  background: #ff9901;
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: 0.5s;
+}
+
+.center:hover:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.center:hover:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.center:hover div {
+  transform: scale(0);
+}
+
 .footer-main {
   padding: 92px 0;
   background: #1a1b1f;
